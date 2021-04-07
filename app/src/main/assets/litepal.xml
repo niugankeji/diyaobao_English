@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="DiYaoBao"></dbname>
+    <version value="2"></version>
+    <list>
+        <mapping class="com.leman.diyaobao.step.bean.StepData"></mapping>
+        <mapping class="com.leman.diyaobao.entity.ZhiWuData"></mapping>
+        <mapping class="com.leman.diyaobao.entity.DuoTu"></mapping>
+    </list>
+</litepal>

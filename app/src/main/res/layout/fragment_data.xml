@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mycollection_bottom_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e5e5e5" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:text="Chosen"
+                android:textColor="#1A1A1A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_select_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@+id/tv"
+                android:text="0"
+                android:textColor="#1A1A1A"
+                android:textSize="20sp" />
+
+            <Button
+
+                android:id="@+id/btn_delete"
+                android:layout_width="80dp"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_noclickable_shape"
+                android:gravity="center"
+                android:text="Delete"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/select_all"
+                android:layout_width="80dp"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/btn_delete"
+                android:background="@drawable/bg_selete_all"
+                android:gravity="center"
+                android:text="Select all"
+                android:textColor="#000001"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

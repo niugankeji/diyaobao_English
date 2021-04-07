@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#883B3C41"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:divider="@drawable/row_line"
+        android:showDividers="middle"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            style="@style/map_rb_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Walking / running"/>
+
+
+        <RadioButton
+            style="@style/map_rb_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cycling"/>
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:gravity="center"
+            android:textColor="@color/writ"
+            android:background="@mipmap/btn_sport_left"/>
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Return"
+            android:gravity="center"
+            android:textColor="@color/writ"
+            android:background="@mipmap/btn_sport_right"/>
+    </LinearLayout>
+</RelativeLayout>

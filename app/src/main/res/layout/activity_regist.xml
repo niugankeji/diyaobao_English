@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity">
+
+    <include layout="@layout/title_layout" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/phone_icon" />
+
+        <EditText
+            android:id="@+id/phonNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:background="@null"
+            android:hint="Please fill in your mobile number"
+            android:inputType="phone"
+            android:textColor="@color/writ"
+            android:textColorHint="@color/writ"
+            android:textCursorDrawable="@null"
+            android:textSize="13sp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/writ" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Please enter the verification code"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textColor="@color/writ"
+            android:textColorHint="@color/writ"
+            android:textCursorDrawable="@null"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/sendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/writ"
+            android:background="@drawable/write_shape"
+            android:text="Send verification code"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/writ" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/password" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Please set the password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/writ"
+            android:textColorHint="@color/writ"
+            android:textCursorDrawable="@null"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/showPassword"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+             />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/writ" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="right|center_vertical"
+        android:layout_marginTop="10dp">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/writ" />
+        <TextView
+            android:id="@+id/xieyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:text="I have read the privacy agreement carefully"
+            android:textColor="@color/writ"
+             />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_shape"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Finish"
+        android:textColor="@color/writ" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

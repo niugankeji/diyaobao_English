@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/nearby_user_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="附近的用户"
+                android:textColor="@drawable/index_textcolor_selecter" />
+
+            <View
+                android:id="@+id/nearby_user_view"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:background="#0086F1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1sp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#cfcfcf" />
+
+        <LinearLayout
+            android:id="@+id/nearby_data_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="附近的数据"
+                android:textColor="@drawable/index_textcolor_selecter" />
+
+            <View
+                android:id="@+id/nearby_data_view"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:background="#0086F1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

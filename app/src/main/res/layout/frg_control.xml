@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.leman.diyaobao.movement.ValuePanel
+            android:id="@+id/panel_steps"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:panel_title="Steps today" />
+
+        <com.leman.diyaobao.movement.ValuePanel
+            android:id="@+id/panel_distance"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:panel_title="Today's moving distance (km)" />
+
+        <com.leman.diyaobao.movement.ValuePanel
+            android:id="@+id/panel_calorie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:panel_title="Exercise consumes calories" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.leman.diyaobao.movement.ValuePanel
+            android:id="@+id/panel_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:panel_title="Exercise time (minutes)" />
+
+        <com.leman.diyaobao.movement.ValuePanel
+            android:id="@+id/panel_step_velocity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:panel_title="Step frequency (steps / min)" />
+
+        <com.leman.diyaobao.movement.ValuePanel
+            android:id="@+id/panel_velocity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:panel_title="Sport pace (km / h)" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btn_sports_map"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/control_btn_height"
+            android:background="@drawable/bg_login_bt"
+            android:text="I want to exercise"
+            android:textColor="@color/colorLoginBt" />
+
+
+        <Button
+            android:id="@+id/body_manage"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/control_btn_height"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_login_bt"
+            android:text="Body management"
+            android:textColor="@color/colorLoginBt" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Real time steps"
+            android:textColor="@color/colorTvNormal"
+            android:textSize="24sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btn_voice_broadcast"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/control_btn_height"
+            android:background="@drawable/bg_login_bt"
+            android:text="Voice Announcements"
+            android:textColor="@color/colorLoginBt" />
+
+
+        <Button
+            android:id="@+id/bt_share"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/control_btn_height"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_login_bt"
+            android:text="I want to share"
+            android:textColor="@color/colorLoginBt" />
+
+        <TextView
+            android:id="@+id/tv_current_steps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="10000"
+            android:textColor="@color/colorTabTxtSelected"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+
+    <lecho.lib.hellocharts.view.ColumnChartView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" />
+</LinearLayout>

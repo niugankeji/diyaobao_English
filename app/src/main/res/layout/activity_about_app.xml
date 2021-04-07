@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/title_layout" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:text=" “LAISmart”Developed by Qu Yonghua, State Key Laboratory of Remote Sensing Science, Beijing Normal University. \nUsers can download it for free.“LAIsmart”The measurement accuracy has been compared with that of imported instruments（LAI-2000，LAI-2200C, TRAC, AccuPAR）. Some results can be seen from the author's paper.\nContact information：qyh@bnu.edu.cn. Reference paper“Qu, Y., Potential and Limits of Retrieving Conifer Leaf Area Index Using Smartphone-Based Method. Forests 2017, 8.” "/>
+</LinearLayout>

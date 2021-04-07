@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include layout="@layout/title_layout" />
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:divider="@drawable/row_line"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:showDividers="middle"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rb_1"
+            style="@style/map_rb_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Walking / running" />
+
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            style="@style/map_rb_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cycling" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/area_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.leman.diyaobao.movement.ValuePanel
+                android:id="@+id/panel_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:panel_title="Exercise time (minutes)" />
+
+            <com.leman.diyaobao.movement.ValuePanel
+                android:id="@+id/panel_velocity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:panel_title="Moving distance (km)" />
+
+            <com.leman.diyaobao.movement.ValuePanel
+                android:id="@+id/panel_step_velocity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:panel_title="Step frequency (steps / min)" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.leman.diyaobao.movement.ValuePanel
+                android:id="@+id/panel_calorie"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:panel_title="Exercise consumes calories" />
+
+            <com.leman.diyaobao.movement.ValuePanel
+                android:id="@+id/panel_distance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:panel_title="Sport pace (km / h)" />
+
+            <com.leman.diyaobao.movement.ValuePanel
+                android:id="@+id/panel_steps"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:panel_title="Movement steps" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area_top"
+        android:layout_margin="10dp"
+        android:background="@mipmap/ic_launcher"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/area_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/btn_sport_left"
+            android:gravity="center"
+            android:text="Start"
+            android:textColor="@color/writ" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/btn_sport_right"
+            android:gravity="center"
+            android:text="Return"
+            android:textColor="@color/writ" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/area_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/btn_sport_right"
+            android:gravity="center"
+            android:text="Stop"
+            android:textColor="@color/writ" />
+
+        <TextView
+            android:id="@+id/tv_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/btn_sport_left"
+            android:gravity="center"
+            android:text="Continue"
+            android:textColor="@color/writ" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/area_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorLoginBt"
+            android:gravity="center"
+            android:text="Share"
+            android:textColor="@color/writ" />
+    </LinearLayout>
+
+
+</RelativeLayout>
